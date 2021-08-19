@@ -1,0 +1,283 @@
+html {
+    width: 100%;
+    background-color: #E7E7E7;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.page-wrapper {
+    margin-left: auto;
+    /*hacer que esto sea posible solamente cuando NO es responsibe*/
+}
+
+.header-button {
+    margin-left: auto;
+}
+
+.botonSalir {
+    color: rgba(243, 251, 4, 1);
+}
+
+.botonSalir:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+/*MARGENES PARA EQULIBRAR A CONTENEDORES CUANDO ES ESCRITORIO*/
+
+.page-wrapper .page-container .listaEnvios {
+    margin-top: 8%
+}
+
+.page-wrapper .page-container .listaUsuarios {
+    margin-top: 8%
+}
+
+.page-wrapper .page-container .addPedidos {
+    margin-top: 8%
+}
+
+.header-mobile-inner .logo {
+    width: 13%;
+}
+
+.botonNuevoUsuario,
+.botonNuevoEnvio {
+    text-align: right;
+}
+
+.listaDespegable {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 8%;
+}
+
+.hamburger {
+    border-radius: 10px;
+}
+
+.form-group .btn {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tablaAddPedidos {
+    display: none;
+}
+
+.fa-retweet, .fa-edit, .fa-trash-alt{
+    cursor: pointer;
+    color: black;
+}
+.textoAcciones{text-decoration: none; color:black;}
+.listaAcciones{text-decoration: none;}
+.listaAcciones:hover, .textoAcciones:hover{color: gray; text-decoration: none;}
+.dropdown-menu{
+    background-color: white;
+    border-radius: 8%;
+    border-color: black;
+    box-shadow: 1px 1px 2px black;
+    padding: 1% 2%;
+}
+
+.page-wrapper .header-mobile .header-mobile__bar .container-fluid .header-mobile-inner .logo .imagen{
+    width: 40%;
+    border-radius:50%;
+}
+
+.menu {
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 100px;
+    /*height: 76px;
+    width: 120px;*/
+    margin: 0;
+    overflow: hidden;
+    /*border-radius: 10%;*/
+    border-radius: .25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
+  
+  /* Bordes superiores */
+  
+  .menu.Entregado {
+    border-top: #00b7ff 0.3em solid;
+  }
+
+  .menu.Pendiente {
+    border-top: #ffc000 0.3em solid;
+  }
+
+  .menu.Aceptado {
+    border-top: #1eff00 0.3em solid;
+  }
+
+  .menu.Rechazado {
+    border-top: #ff0000 0.3em solid;
+  }
+
+  .menu.Conformado {
+    border-top: #1100ff 0.3em solid;
+  }
+
+  /* Atributos y transición */
+
+.menu > span {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    
+  }
+  
+  .menu:after, .menu > span > span {
+    display: block;
+    text-align: center;
+    /*border-radius: 0em;
+    /*padding: 2em 0 1.5em;*/
+    
+  }
+  
+  .menu:after {
+    content: attr(data-title);
+    width: 100%;
+    background: #000;
+    color: #fff; 
+    border-radius: 4%;
+  }
+  
+  .menu > span > span {
+    width: 100px;
+    color: #fff;
+    
+  }
+  
+  .menu.Entregado > span > span {
+    background: #00b7ff;
+  }
+
+  .menu.Pendiente  > span > span {
+    background: #ffc000;
+  }
+
+  .menu.Aceptado  > span > span {
+    background: #1eff00;
+    
+  }
+
+  .menu.Rechazado > span > span {
+    background: #ff0000;
+  }
+
+  .menu.Conformado > span > span {
+    background: #1100ff;
+  }
+  
+  /* Lo que pasa con hover */
+
+.menu:hover > span {
+    height: 100%; 
+}
+
+/* Dando formato a lista */ 
+
+.botonAccion {
+  list-style-type: none;
+  margin: 0;
+  /*padding: 0;*/
+  
+}
+
+.listaBotonAccion a {
+  display: inline;
+  float: left;
+  text-decoration: none;
+  font-family: sans;
+  
+}
+
+.botonNuevoUsuarioEnvio{margin-left: 15%;}
+.botonGuardarEnvio{margin-right: left;}
+
+@media screen and (max-width:991px) {
+    .header-desktop {
+        display: none;
+    }
+    .page-wrapper .page-container .container-fluid {
+        margin-top: 1%;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .title-1 {
+        font-size: 150%;
+    }
+    .header-mobile-inner .logo {
+        width: 30%;
+    }
+
+    .styled{width: -webkit-fill-available;}
+    
+   
+}
+
+@media screen and (max-width:700px) {
+    .header-mobile-inner .logo {
+        width: 20%;
+    }
+    .paginate_button {
+        font-size: 55%;
+    }
+    .form-group .btn {
+        width: 100%;
+        
+    }
+    .header-mobile .navbar-mobile {
+        top: 85px;
+    }
+}
+
+@media screen and (max-width:630px) {
+    .botonNuevoUsuario,
+    .botonNuevoEnvio {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .header-mobile .navbar-mobile {
+        top: 68px;
+    }
+    .page-wrapper .header-mobile .header-mobile__bar .container-fluid .header-mobile-inner .logo .imagen{width: 70%;}
+
+}
+
+@media screen and (max-width:430px) {
+    .botonNuevoUsuarioEnvio {
+        width: 20%;
+        font-size: 10px;
+    }
+    .botonGuardarEnvio, .botonAtras {
+        font-size: 10px;
+    }
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+        padding-left: 0%;
+        padding-right: 0%;
+        margin: 0% 2%;
+    }
+    
+    .modal input, .modal label, .modal div{margin-right: 2%;}
+
+}
